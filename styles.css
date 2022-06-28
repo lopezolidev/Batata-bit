@@ -33,3 +33,33 @@ html {
 
     font-family: 'Inter', sans-serif; */
 
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5rem; */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 33rem;
+    text-align: center;
+}
+header img {
+    width: 16rem;
+    height: 2.4rem;
+    margin-top: 6rem;
+    align-self: center;
+}
+
+.header--title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 22rem;
+    /* el profe agrego margenes, eso lo cambie por el gap que le di mas arriba al contenedor padre
+    margin-top: 40px */
+    /* este text-align es algo innecesario porque ya esta en el contenedor padre con text-align */
+    text-align: center;
+    align-self: center;
+}
