@@ -44,6 +44,7 @@ header {
     min-width: 320px;
     height: 33rem;
     text-align: center;
+    background:  linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
 }
 header img {
     width: 16rem;
@@ -62,4 +63,56 @@ header img {
     /* este text-align es algo innecesario porque ya esta en el contenedor padre con text-align */
     text-align: center;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header--title-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    /* este line-height es el salto de linea */
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header--title-container p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+}
+
+.header--title-container .header--button {
+    position: absolute;
+    /* comente el display: block para tener este contendor como display flex y evitar darle margenes al "i" que tiene al lado del texto para el icono */
+    /* display: block; */
+    left: calc(50% - 12rem);
+    /* decidi usar rem en vez de pixeles para que se mantenga la separación a medida que cambiamos de dispositivo */
+    top: 28rem;
+    margin-top: 3.5rem;
+    padding: 1.6rem;
+    width: 22.8rem;
+    height: 4.8rem;
+    background-color: var(--off-white);
+    /* el box shadow es para generar sombra en nuestras etiquetas, el primer numero es la sombra de arriba, el segundo la de los lados y la tercera la de abajo, el rgba es para el colo, el degradado es el último numero entre parentesis que se añade con "0.algo" */
+    box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+    display: flex;
+    justify-content: space-around;
+    /* con align-items: baseline podemos situar a todos los elementos hijos a la misma altura, asi evitando darle margin-top al icono */
+    align-items: baseline;
+}
+
+.header--button span {
+    /* por defecto los span vienen con display inline, sin embargo para alterar su tamaño debemos darle el display inline-block o block */
+    display: inline-block;
+    width: 1.2rem;
+    height: 0.8rem;
+    background-image: url('./assets/icons/down-arrow.svg');
 }
