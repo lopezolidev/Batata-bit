@@ -6,6 +6,7 @@
     5.- Otros
 */
 :root {
+    /* guardamos los colores en variables para mantener la consistencia en nuestro código, debido a que vamos a utilizar esos valores muchas veces */
     /* Colors */
     --bitcoin-orange: #F7931A;
     --soft-orange: #FFE9D5;
@@ -65,7 +66,7 @@ header img {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .header--title-container h1 {
@@ -115,4 +116,62 @@ header img {
     width: 1.2rem;
     height: 0.8rem;
     background-image: url('./assets/icons/down-arrow.svg');
+}
+
+main {
+    width: 100%;
+    /* el mismo contenido ira definiendo la altura de nuestro main */
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    /* decidi utilizar nuevamente flexbox para hacer mas facil el espaciado de los elementos dentro del */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    padding-top: 8.8rem;
+    padding-bottom: 2.8rem;
+}
+
+.main-exchange-container .backgroundImg {
+    height: 20rem;
+    width: 20rem;
+    /* margin-bottom: 3rem */
+    background-image: url('./assets/img/Bitcoin.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    /* el agregar "align-items: center" en el contenedor padre nos situa este elemento en el centro sin necesidad de utilizar un "margin: 0 auto" */
+    /* agrego display flex para evitar calcular margenes entre el titulo y el parrafo. ademas de gap dentro de este contenedor para separar mas los elemntos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.main-exchange-container--title h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    color: var(--black);
+}
+
+.main-exchange-container--title p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #757575;
 }
