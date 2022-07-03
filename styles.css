@@ -12,8 +12,8 @@
     --soft-orange: #FFE9D5;
     --secondary-blue: #1A9AF7;
     --soft-blue: #E7F5FF;
-    --warm-black: #201E1C;
-    --black: #282623;
+    --warm-black: #282623;
+    --black: #201E1C;
     --grey: #757575;
     --soft-grey:#B5B0AC;
     --off-white: #FAF8F7;
@@ -276,4 +276,103 @@ main {
     padding: 0.8rem;
     border-radius: 0.72rem;
     align-self: center;
+}
+
+.main-product-detail {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 3.6rem 1.8rem;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 3rem;
+    align-items: center;
+}
+
+.main-product-detail .main-product-detail--batata-logo {
+    position: absolute;
+    background-image: url('./assets/icons/batata.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2.4rem;
+    width: 4rem;
+    top: -2%;
+    left: calc(50% - 2rem);
+}
+
+.main-product-detail .product-detail--title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.main-product-detail .product-detail--title h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--just-white);
+}
+
+.main-product-detail .product-detail--title p {
+    color: var(--grey);
+    font-size: medium;
+}
+
+.main-product-detail .product-card--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.product-card--container .product-detail--card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.6rem;
+    background-color: var(--warm-black);
+    border-radius: 0.5rem;
+    min-width: 30rem;
+    max-width: 40rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.16);
+}
+
+.product-card--container .product-detail--card .clock {
+    background-image: url('./assets/icons/clock.svg');
+}
+
+.product-card--container .product-detail--card .eye {
+    background-image: url('./assets/icons/eye.svg');
+}
+
+.product-card--container .product-detail--card .dollar-sign {
+    background-image: url('./assets/icons/dollar-sign.svg');
+}
+
+.product-card--container .product-detail--card .check-circle {
+    background-image: url('./assets/icons/check-circle.svg');
+}
+
+
+.product-card--container .product-detail--card .icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.product-card--container .product-detail--card .product--card-title {
+    font-size: large;
+    color: var(--just-white);
+}
+
+.product-card--container .product-detail--card .product--card-body {
+    font-size: medium;
+    color: var(--grey);
 }
