@@ -37,6 +37,8 @@ html {
 
     font-family: 'Inter', sans-serif; */
 
+/* Header */
+
 header {
     position: relative;
     display: flex;
@@ -121,6 +123,10 @@ header img {
     background-image: url('./assets/icons/down-arrow.svg');
 }
 
+/* Main */
+/* Seccion de imagen bitcoin y descripcion principal */
+
+
 main {
     width: 100%;
     /* el mismo contenido ira definiendo la altura de nuestro main */
@@ -179,11 +185,21 @@ main {
     color: #757575;
 }
 
+/* Seccion de las tablas de monedas */
+
 .main-tables-container {
-    width: 64%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    width: 60vw;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 
 .main-currency-table, .main-comissions-table {
+    scroll-snap-align: center;
     width: 100%;
     min-width: 20rem;
     max-width: 50rem;
@@ -194,6 +210,7 @@ main {
     justify-content: space-around;
     gap: 2.4rem;
     margin-bottom: 8rem;
+    margin-top: 4rem;
 }
 .main-currency-table .currency-table--title, .main-comissions-table .comissions-table--title {
     font-weight: bold;
@@ -280,6 +297,8 @@ main {
     align-self: center;
 }
 
+/* Seccion de detalles del producto */
+
 .main-product-detail {
     width: 100%;
     height: auto;
@@ -332,6 +351,8 @@ main {
     gap: 1.6rem;
 }
 
+/* Estilos de cards sobre el producto */
+
 .product-card--container .product-detail--card {
     display: flex;
     flex-direction: column;
@@ -375,7 +396,7 @@ main {
 }
 
 .product-card--container .product-detail--card .product--card-body {
-    font-size: medium;
+    font-size: 1.4rem;
     color: var(--grey);
 }
 
@@ -398,6 +419,9 @@ main {
     color: var(--just-white);
     padding-top: 5rem;
 }
+
+
+/* Estilos de los planes */
 
 .main-plans-container {
     width: 100%;
@@ -543,4 +567,40 @@ main {
     height: 2.8rem;
     /* este atributo es para alinear de forma vertial el texto */
     vertical-align: text-top;
+}
+
+/* Footer*/
+
+footer {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--just-white);
+    font-family:  'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+}
+
+footer .left ul {
+    list-style: none;
+}
+
+footer .left ul a {
+    text-decoration: none;
+}
+
+footer .right img {
+    width: 8rem;
+    height: 8rem;
 }

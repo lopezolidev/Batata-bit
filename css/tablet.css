@@ -1,0 +1,25 @@
+
+.main-product-detail .product-card--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-card--container .product-detail--card {
+    margin: 0 auto;
+}
+
+.plans-container--slider {
+    display: flex;
+    justify-content: center;
+}
+
+footer .left{
+    justify-content: flex-start;
+    padding-left: 4rem 
+}
+
+footer .right {
+    justify-content: flex-end;
+    padding-right: 4rem;
+}
