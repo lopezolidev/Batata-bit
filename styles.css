@@ -16,6 +16,7 @@
     --black: #201E1C;
     --grey: #757575;
     --soft-grey:#B5B0AC;
+    --dark-grey: #757575;
     --off-white: #FAF8F7;
     --just-white: #FFFFFF;
 }
@@ -29,6 +30,7 @@
 html {
     font-size: 62.5%;
     font-family: 'DM sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*     font-family: 'DM Sans', sans-serif;
@@ -375,4 +377,170 @@ main {
 .product-card--container .product-detail--card .product--card-body {
     font-size: medium;
     color: var(--grey);
+}
+
+.main-image-container {
+    width: 100%;
+    min-width: 32rem;
+    height: 50vh;
+    background-image: url('./assets/img/bitcoinbaby2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.main-image-container h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    padding-top: 5rem;
+}
+
+.main-plans-container {
+    width: 100%;
+    min-width: 32rem;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    background-color: var(--off-white);
+}
+
+.main-plans-container .plans--title {
+    width: 100%;
+    min-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.main-plans-container .plans--title h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    text-align: center;
+}
+
+.main-plans-container .plans--title p {
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+.plans-container--slider {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    gap: 5rem;
+    /* La propiedad de CSS overflow-x establece lo que se muestra cuando el contenido desborda los bordes izquierdo y derecho de un elemento a nivel de bloque. Puede que no sea nada, una barra de desplazamiento o el contenido adicional. */
+    overflow-x: scroll;
+    /* la propiedad de css overscroll-behavior establece lo que hace un navegador cuando alcanza el límite de un área de desplazamiento. Es una abreviatura de overscroll-behavior-x y overscroll-behavior-y. */
+    overscroll-behavior-x: contain;
+    /* La propiedad CSS scroll-snap-type establece qué tan estrictamente se aplican los puntos de snap en el contenedor de desplazamiento en caso de que haya uno */
+    scroll-snap-type: x proximity;
+}
+
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 100%;
+    min-width: 23rem;
+    max-width: 30rem;
+    height: 36vh;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+    background-color: var(--just-white);
+    border-radius: 1.6rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+}
+
+.plans-container--card .recommended--card {
+    position: absolute;
+    /* /* height: 3rem;  */
+    width: 13rem;
+    /* decidi eliminar el height debido a que complica introducir el padding, el cual solo queda mejor */
+    padding: 1rem;
+    top: -2rem;
+    left: calc(50% - 6.5rem);
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 1.2rem;
+    color: var(--just-white);
+    background-color: var(--bitcoin-orange);
+}
+
+.plan-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+}
+
+.plan-info-container .plan-card--title {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.plan-info-container .plan-card--price {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    align-items: flex-start;
+}
+
+.plan-card--price .price--icon {
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding-top: 1.8rem;
+}
+
+.plan-card--price p {
+    font-weight: bold;
+    font-size: 7rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.plan-info-container .plan-card--saving {
+    font-family: 'Inter', sans-serif;;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--dark-grey);
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.plan-info-container .plan-card--ca {
+    border: 0.2rem solid var(--bitcoin-orange);
+    border-radius: 0.4rem;
+    padding: 1.4rem 1.6rem;
+    background-color: var(--off-white);
+    color: var(--warm-black);
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.plan-info-container .plan-card--ca span {
+    background-image: url('./assets/icons/orange-right-arrow.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2.8rem;
+    height: 2.8rem;
+    /* este atributo es para alinear de forma vertial el texto */
+    vertical-align: text-top;
 }
